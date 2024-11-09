@@ -26,7 +26,6 @@ body {
 .myTasks li {
   height: 50px;
   display: flex;
-  width: 100%;
   align-items: center;
   border-bottom-color: #efefef;
   border-bottom-width: 1px;
@@ -35,10 +34,14 @@ body {
   box-sizing: border-box;
 }
 
+.myTasks input[type="text"] {
+  width: 100%;
+}
+
 
 .input-large {
   height: 30px;
-  width: 100%;
+  /* width: 100%; */
   border-color: #333;
   padding: 0 10px;
   font-size: 16px;

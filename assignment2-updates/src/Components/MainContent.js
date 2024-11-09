@@ -46,6 +46,7 @@ const MainContent = ({ searchText }) => {
         <ul>
           {filteredTasks.map((task) => (
             <li key={task.id}>
+            
               <input
                 type="checkbox"
                 checked={task.completed}
@@ -64,11 +65,13 @@ const MainContent = ({ searchText }) => {
               ) : (
                 <span 
                   onClick={() => handleEditTask(task.id, task.name)}
-                  style={{ textDecoration: task.completed ? 'line-through' : 'none', cursor: 'pointer' }}
+                  style={{ textDecoration: task.completed ? 'line-through' : 'none', cursor: 'pointer', width: '100%'}}
                 >
                   {task.name}
                 </span>
+      
               )}
+           
               {/* Assign the 'deletebtn' class to the Delete button */}
               <button className="deletebtn" onClick={() => removeTask(task.id)}>Delete</button>
             </li>
